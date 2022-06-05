@@ -1,0 +1,13 @@
+The original data is in the Data directory.
+
+$ ./convert.pl Data/*.txt
+
+    produced the files in the Axis_Specific directory
+
+$ source ./mix
+
+   then produced the files in this directory, but with the comment
+section still at the end.  It needs to be moved to the front, the Axis
+fild need to be edited so that it contains the statement "1:2 mix of
+Epara and Eperp".  Also the part about E in the first line needs to be
+removed.  I did these final steps by hand.

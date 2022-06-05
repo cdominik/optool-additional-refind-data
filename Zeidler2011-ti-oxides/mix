@@ -1,0 +1,7 @@
+optool -b data/Anat_par.dat 1 data/Anat_sen.dat 2 -l data/Anat_par.dat
+mv blended.lnk Anatase-Zeidler2011.lnk
+optool -b data/Brook_n1.dat 1 data/Brook_n2.dat 1 data/Brook_n3.dat 1 -l data/Brook_n2.dat
+mv blended.lnk Brookite-Posch2003.lnk
+cp data/Per_nk.dat Perovskite-Zeidler2011.lnk
+optool -b data/Rutile_ao.dat 1 data/Rutile_o.dat 2 -l data/Rutile_o.dat
+mv blended.lnk Rutile-Zeidler2011.lnk

@@ -1,0 +1,97 @@
+J/A+A/540/A2        Refractive index of hydrocarbon solids    (Jones, 2012)
+================================================================================
+Variations on a theme - the evolution of hydrocarbon solids.
+II. Optical property modelling - the optEC(s) model.
+    Jones A.
+   <Astron. Astrophys. 540, A2 (2012)>
+   =2012A&A...540A...2J
+================================================================================
+ADC_Keywords: Interstellar medium ; Models
+Keywords: dust, extinction - ISM: general
+
+Abstract:
+    The properties of hydrogenated amorphous carbon (a-C:H) dust are known
+    to evolve in response to the local conditions.
+
+    We present an adaptable model for the determination of the optical
+    properties of low-temperature, interstellar a-C:H grains that is based
+    on the fundamental physics of their composition.
+
+Description:
+    The imaginary part of the complex refractive index m(n,k), k, for
+    a-C:H materials, from 50eV to cm wavelengths, is derived and the real
+    part, n, of the complex refractive index m(n,k) is then calculated
+    using the Kramers-Kronig relations.
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName   Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe         80        .   This file
+optecsn.dat   159     1000  *Real part of the refractive index data
+optecsk.dat   159     1000  *Imaginary part of the refractive index data
+--------------------------------------------------------------------------------
+Note on *.dat: for a suite of a-C:H materials predicted by the optEC(s) model
+  as a function of wavelength [micron], energy E [eV] and band gap Eg [eV].
+--------------------------------------------------------------------------------
+
+See also:
+     J/A+A/542/A98 : Hydrocarbon solids. optEC(s) model. II. (Jones, 2012)
+
+Byte-by-byte Description of file: optecsn.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  9  E9.4  um      lambda    Wavelength
+  11- 19  E9.4  eV      E         Energy equivalent to wavelength
+  21- 29  E9.4  ---     n0        Real part of m(n,k) Eg = -0.1  eV (Eg-)
+  31- 39  E9.4  ---     n1        Real part of m(n,k) Eg =  0.0  eV
+  41- 49  E9.4  ---     n2        Real part of m(n,k) Eg =  0.1  eV
+  51- 59  E9.4  ---     n3        Real part of m(n,k) Eg =  0.25 eV
+  61- 69  E9.4  ---     n4        Real part of m(n,k) Eg =  0.5  eV
+  71- 79  E9.4  ---     n5        Real part of m(n,k) Eg =  0.75 eV
+  81- 89  E9.4  ---     n6        Real part of m(n,k) Eg =  1.0  eV
+  91- 99  E9.4  ---     n7        Real part of m(n,k) Eg =  1.25 eV
+ 101-109  E9.4  ---     n8        Real part of m(n,k) Eg =  1.5  eV
+ 111-119  E9.4  ---     n9        Real part of m(n,k) Eg =  1.75 eV
+ 121-129  E9.4  ---     n10       Real part of m(n,k) Eg =  2.0  eV
+ 131-139  E9.4  ---     n11       Real part of m(n,k) Eg =  2.25 eV
+ 141-149  E9.4  ---     n12       Real part of m(n,k) Eg =  2.5  eV
+ 151-159  E9.4  ---     n13       Real part of m(n,k) Eg =  2.67 eV (Eg+)
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: optecsk.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1-  9  E9.4  um      lambda    Wavelength
+  11- 19  E9.4  eV      E         Energy equivalent to wavelength
+  21- 29  E9.4  ---     k0        Imaginary part of m(n,k) Eg = -0.1  eV (Eg-)
+  31- 39  E9.4  ---     k1        Imaginary part of m(n,k) Eg =  0.0  eV
+  41- 49  E9.4  ---     k2        Imaginary part of m(n,k) Eg =  0.1  eV
+  51- 59  E9.4  ---     k3        Imaginary part of m(n,k) Eg =  0.25 eV
+  61- 69  E9.4  ---     k4        Imaginary part of m(n,k) Eg =  0.5  eV
+  71- 79  E9.4  ---     k5        Imaginary part of m(n,k) Eg =  0.75 eV
+  81- 89  E9.4  ---     k6        Imaginary part of m(n,k) Eg =  1.0  eV
+  91- 99  E9.4  ---     k7        Imaginary part of m(n,k) Eg =  1.25 eV
+ 101-109  E9.4  ---     k8        Imaginary part of m(n,k) Eg =  1.5  eV
+ 111-119  E9.4  ---     k9        Imaginary part of m(n,k) Eg =  1.75 eV
+ 121-129  E9.4  ---     k10       Imaginary part of m(n,k) Eg =  2.0  eV
+ 131-139  E9.4  ---     k11       Imaginary part of m(n,k) Eg =  2.25 eV
+ 141-149  E9.4  ---     k12       Imaginary part of m(n,k) Eg =  2.5  eV
+ 151-159  E9.4  ---     k13       Imaginary part of m(n,k) Eg =  2.67 eV (Eg+)
+--------------------------------------------------------------------------------
+
+History:
+    * 13-Mar-2012: First version
+    * 15-Aug-2012: Corrected version, from author
+
+Acknowledgements:
+    Anthony Jones, Anthony.Jones(at)ias.u-psud.fr
+
+References:
+    Jones, Paper I,   2012A&A...540A...1J
+    Jones, Paper III, 2012A&A...542A..98J, Cat. J/A+A/542/A98
+
+================================================================================
+(End)             Anthony Jones [IAS], Patricia Vannier [CDS]        16-Feb-2012

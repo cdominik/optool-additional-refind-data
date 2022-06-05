@@ -1,0 +1,41 @@
+#+TITLE: Refractive index data for optool
+#+OPTIONS: num:nil toc:nil
+
+This repository contains refractive index datasets from the literature
+that have been prepared for use with [[https://github.com/cdominik/optool][optool]].  Often, authors choose
+some private format to represent this data.  Databases on the web use
+other formats again.
+
+In this repository, I write small programs to convert them into the
+lnk format that is used in =optool=.  With time, I hope to produce
+files for many relevant materials and papers.
+
+* What is in this repository
+
+** Directory =AA_WORKINGDIR=
+In this directory, I do look at and work on new data, before deciding
+to convert it and make it available in a form digestible for =optool=.
+
+** Directory =AA_INGESTED=
+These are datasets that are already part of the [[https://github.com/cdominik/optool][optool distribution]],
+which contains a carefully selected collection of materials.  Not all
+materials included in =optool= have been prepared here, but some have.
+
+** Directories for specific publications
+- Curtis2005-water-ice-temp-series
+- Hudgins1993-ices-and-mixes
+- Jones2012-HAC-band-series
+- Khare1984-tholins
+- Koike1990-phyllosilicates
+- Posch2007-carbonates
+- Querry1987-phyllosilicates
+- Suto2006-forsterite-temp-series
+- Zeidler2011-ti-oxides
+
+** bib.bib
+A BibTeX library file with entries for the papers where the data is
+from.  You should always give credit to the laboratory papers that
+present the measured data.  All the entries in this file are also
+present in the optool.bib file in the optool distribution, so for
+LaTeX processing, it is sufficient to list optool.bib as a BibTeX
+database file.

@@ -1,0 +1,6 @@
+data/ contains the original datafiles from the Hudgins paper
+
+The conversion is done by 2 separate programs:
+
+$ ./split-and-interpolate-table11.pl
+$ python split-most-tables.py

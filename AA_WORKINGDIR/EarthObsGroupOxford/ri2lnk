@@ -1,0 +1,116 @@
+#!/usr/bin/perl
+
+# This program turns files of the ARIA archive into lnk files for optool
+#
+# A .ri file is a database file from this source:
+#   Aerosol Refractive Index Archive
+#   Earth Observation Data Group
+#   Department of Physics
+#   University of Oxford
+#   http://eodg.atm.ox.ac.uk/ARIA/
+#
+# These files sometimes have wavenumbers, sometimes wavelengths.  Detection
+# of that is automatic by looking at the FORMAT field.  ri2lnk needs files
+# that have both n and k in them - some files in ARIA have only one of
+# the two - these will give an error.
+#
+# ri2lnk tries to fill the database fields optool wants as best as
+# possible.  You can help it by giving values for the Name, Class, State,
+# Formula, ADS-link, BibTeX-key, Temperature [K], and density [g/cm^3]
+# fields using options -n -c -s -f -a -b -t -r, respectively.  Still, once
+# you have written the new file, check it for any occurrences of the
+# word FIXME do see what still needs to be added.
+#
+# usage: ri2lnk [OPTIONS] file.ri > result.lnk
+#
+
+use Getopt::Std;
+getopts('n:c:s:f:a:b:t:');
+
+$rifile = shift;
+open(IN,"<",$rifile);
+while ($line = <IN>) {
+  if ($line =~ /(#)([-a-zA-Z0-9_]+)\s*=\s*(\S.*?)\s*$/) {
+    $key = lc($2);
+    $val = $3;
+    $db{$key} = $val;
+  } elsif ($line =~ /(##)\s*(\S.*?)\s*$/) {
+    $val = $2;
+    $db{$key} .= "; $val";
+  } else {
+    push(@lines,$line);
+  }
+}
+
+# Analyze the format and get the index values
+if (not $db{format}) {die "No #FORMAT in $rfile\n"}
+@fields = split(/\s+/,$db{format});
+$iwav=-1;$ilam=-1;$in=-1;$idn=-1;$ik=-1;$idk=-1;
+for $i (0..$#fields) {
+  $field = lc($fields[$i]);
+  if ($field eq "wavn") {
+    $iwav = $i;
+  } elsif ($field eq "wavl") {
+    $ilam = $i;
+  } elsif ($field eq "n") {
+    $in = $i;
+  } elsif ($field eq "dn") {
+    $idn = $i;
+  } elsif ($field eq "k") {
+    $ik = $i;
+  } elsif ($field eq "dk") {
+    $idk = $i;
+  }
+}
+
+die "No wavelength or wavenumber column available\n" unless $ilam>=0 or $iwav>=0;
+die "No n column available" unless $in>=0;
+die "No k column available" unless $ik>=0;
+
+# parse all the non-db lines and fill the arrays
+while ($line=shift(@lines)) {
+  $line =~ s/^\s*(.*?)\s*$/$1/;  # trim
+  @fields = split(/\s+/,$line);
+  if ($ilam>=0) {
+    push @lam,$fields[$ilam];
+  } elsif ($iwav>=0) {
+    push @lam,1.*10000/$fields[$iwav];    
+  }
+  push @n,$fields[$in];
+  push @k,$fields[$ik];
+}
+
+if ($lam[1] < $lam[0]) {
+  # Reverse, to make sure lambda is sorted properly
+  @lam = reverse(@lam);
+  @n   = reverse(@n);
+  @k   = reverse(@k);
+}
+
+# Write the file header
+
+printf "# Material: %s\n",$db{"substance"};
+printf "# Reference: %s\n",$db{"reference"};
+print "#\n";
+printf "# Name:        %s\n",($opt_n or $db{"substance"});
+printf "# Class:       %s\n",($opt_c or "FIXME");
+printf "# State:       %s\n",($opt_s or "FIXME");
+printf "# Formula:     %s\n",($opt_f or "FIXME");
+printf "# Temperature: %s\n",$opt_t if $opt_t;
+printf "# ADS-link:    %s\n",($opt_a or "FIXME");
+printf "# BibTeX-key:  %s\n",($opt_b or "FIXME");
+print "#\n";
+print "# Fields copied from the Oxford database\n";
+delete $db{"format"};
+delete $db{"reference"};
+delete $db{"substance"};
+for $key (keys %db) {
+  printf "# %s = %s\n",$key,$db{$key};
+}
+print "#\n";
+print "# First line is N_lam and rho [g/cm^3], other lines are: lambda[um] n k\n";
+
+printf "  %d  FIXME-RHO-MISSING!\n",$#lam+1;
+for $i (0..$#lam) {
+  printf "  %13.6e %13.6e %13.6e \n", $lam[$i],$n[$i],$k[$i];
+}

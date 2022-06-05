@@ -1,0 +1,12 @@
+# source this file to create the blended files
+
+optool -b data/Fo_Suto2006_T050K_B1u.lnk 1 data/Fo_Suto2006_T050K_B2u.lnk 1 data/Fo_Suto2006_T050K_B3u.lnk 1 -l data/Fo_Suto2006_T050K_B3u.lnk
+mv blended.lnk for-c-T050K-Suto2006.lnk
+optool -b data/Fo_Suto2006_T100K_B1u.lnk 1 data/Fo_Suto2006_T100K_B2u.lnk 1 data/Fo_Suto2006_T100K_B3u.lnk 1 -l data/Fo_Suto2006_T100K_B3u.lnk
+mv blended.lnk for-c-T100K-Suto2006.lnk
+optool -b data/Fo_Suto2006_T150K_B1u.lnk 1 data/Fo_Suto2006_T150K_B2u.lnk 1 data/Fo_Suto2006_T150K_B3u.lnk 1 -l data/Fo_Suto2006_T150K_B3u.lnk
+mv blended.lnk for-c-T150K-Suto2006.lnk
+optool -b data/Fo_Suto2006_T200K_B1u.lnk 1 data/Fo_Suto2006_T200K_B2u.lnk 1 data/Fo_Suto2006_T200K_B3u.lnk 1 -l data/Fo_Suto2006_T200K_B3u.lnk
+mv blended.lnk for-c-T200K-Suto2006.lnk
+optool -b data/Fo_Suto2006_T295K_B1u.lnk 1 data/Fo_Suto2006_T295K_B2u.lnk 1 data/Fo_Suto2006_T295K_B3u.lnk 1 -l data/Fo_Suto2006_T295K_B3u.lnk
+mv blended.lnk for-c-T295K-Suto2006.lnk

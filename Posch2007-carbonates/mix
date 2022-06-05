@@ -1,0 +1,27 @@
+
+optool -b Axis_specific/Calcite-Epara-T010K-Posch2007.lnk  1 Axis_specific/Calcite-Eperp-T010K-Posch2007.lnk  2 -l Axis_specific/Calcite-Eperp-T010K-Posch2007.lnk
+mv blended.lnk Calcite-T010K-Posch2007.lnk
+grep "^#" Axis_specific/Calcite-Epara-T010K-Posch2007.lnk >> Calcite-T010K-Posch2007.lnk
+optool -b Axis_specific/Calcite-Epara-T100K-Posch2007.lnk  1 Axis_specific/Calcite-Eperp-T100K-Posch2007.lnk  2 -l Axis_specific/Calcite-Eperp-T100K-Posch2007.lnk
+mv blended.lnk Calcite-T100K-Posch2007.lnk
+grep "^#" Axis_specific/Calcite-Epara-T100K-Posch2007.lnk >> Calcite-T100K-Posch2007.lnk
+optool -b Axis_specific/Calcite-Epara-T200K-Posch2007.lnk  1 Axis_specific/Calcite-Eperp-T200K-Posch2007.lnk  2 -l Axis_specific/Calcite-Eperp-T200K-Posch2007.lnk
+mv blended.lnk Calcite-T200K-Posch2007.lnk
+grep "^#" Axis_specific/Calcite-Epara-T200K-Posch2007.lnk >> Calcite-T200K-Posch2007.lnk
+optool -b Axis_specific/Calcite-Epara-T300K-Posch2007.lnk  1 Axis_specific/Calcite-Eperp-T300K-Posch2007.lnk  2 -l Axis_specific/Calcite-Eperp-T300K-Posch2007.lnk
+mv blended.lnk Calcite-T300K-Posch2007.lnk
+grep "^#" Axis_specific/Calcite-Epara-T300K-Posch2007.lnk >> Calcite-T300K-Posch2007.lnk
+
+optool -b Axis_specific/Dolomite-Epara-T010K-Posch2007.lnk 1 Axis_specific/Dolomite-Eperp-T010K-Posch2007.lnk 2 -l Axis_specific/Dolomite-Eperp-T010K-Posch2007.lnk
+mv blended.lnk Dolomite-T010K-Posch2007.lnk
+grep "^#" Axis_specific/Dolomite-Epara-T010K-Posch2007.lnk >> Dolomite-T010K-Posch2007.lnk
+optool -b Axis_specific/Dolomite-Epara-T100K-Posch2007.lnk 1 Axis_specific/Dolomite-Eperp-T100K-Posch2007.lnk 2 -l Axis_specific/Dolomite-Eperp-T100K-Posch2007.lnk
+mv blended.lnk Dolomite-T100K-Posch2007.lnk
+grep "^#" Axis_specific/Dolomite-Epara-T100K-Posch2007.lnk >> Dolomite-T100K-Posch2007.lnk
+optool -b Axis_specific/Dolomite-Epara-T200K-Posch2007.lnk 1 Axis_specific/Dolomite-Eperp-T200K-Posch2007.lnk 2 -l Axis_specific/Dolomite-Eperp-T200K-Posch2007.lnk
+mv blended.lnk Dolomite-T200K-Posch2007.lnk
+grep "^#" Axis_specific/Dolomite-Epara-T200K-Posch2007.lnk >> Dolomite-T200K-Posch2007.lnk
+optool -b Axis_specific/Dolomite-Epara-T300K-Posch2007.lnk 1 Axis_specific/Dolomite-Eperp-T300K-Posch2007.lnk 2 -l Axis_specific/Dolomite-Eperp-T300K-Posch2007.lnk
+mv blended.lnk Dolomite-T300K-Posch2007.lnk
+grep "^#" Axis_specific/Dolomite-Epara-T300K-Posch2007.lnk >> Dolomite-T300K-Posch2007.lnk
+

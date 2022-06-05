@@ -1,0 +1,204 @@
+====================================================================
+HELP ON GUI TO DATABASE WITH OPTICAL CONSTANTS
+====================================================================
+
+Version 1.0 -- 1 december 1997 -- Jeroen Bouwman, UvA
+
+
+This is the graphical user interface to the database at /usr/local/iso/.
+This data base contains .lnk files of several dust types of  different 
+chemical composition and latice structure.
+
+CREATING AN OUTPUT FILE
+------------------------
+
+The GUI consists of three menu's. With the top left menu one can choose the dust family,
+with the bottom left the latice structure. The middle menu lists the dust types
+by displaying the chemical formula, the temperature at which it was 
+measured, the density of the dust material and an identification
+number which are listed below.
+
+By selecting from these menu's and finaly choosing 'DONE' from the
+upper right menu a 'dust.dat' file will be created which can be use as
+an input file to 'MODUST'.
+
+
+ABOUT THE NOTATION OF THE CHEMICAL COMPOSITION
+------------------------------------------------
+The notation of the chemical composition of the dust consists of
+the atom names (Like mg for Magnesium) and the number fraction.
+Extension of the olivine (sio4) and pyroxene (si03) famelies are
+omitted.
+
+
+
+DUST TYPES MOST COMMENLY FOUND
+-------------------------------
+"Astronomical silicate": olivine,amophous,mgfe, ID=004
+
+"Amorphous silicate":olivine,amophous,mgfe, ID=001
+"Amorphous silicate":pyroxene,amophous,mgfe, ID=001
+ 
+"Cristaline Forsterite": olivine,cristaline,mg2
+
+"Cristaline Water Ice": ice,cristaline,h20
+
+"Cristaline Pyroxene:": pyroxene,cristaline,mg0.50fe0.43ca0.003al0.04
+
+
+ID NUMBERS
+---------------
+
+001: JENA
+---------
+Silicates                  : Jaeger et al. 1994, Dorschner et al. 1995, Mutschke et al. 1997 and
+                             Jaeger et al. 1998. 
+
+crystalline Mg/Fe-sulfides : Begemann et al. 1994 
+
+crystalline Mg/Fe-oxides   : Henning et al. 1995
+
+crystalline Si-disulfide   : Begemann et al. 1996 
+
+amorphous Al-oxide         : Begemann et al. 1997 
+
+
+Amorphous carbon           : Chemical composition c, Preibisch et al. (1993)
+
+Amorphous carbon argon atmosphere       : Schnaiter et al. 1997
+Amorphous carbon 2/3 argon, 1/3 hydrogen: Schnaiter et al. 1997
+
+Material at low temperature: Henning and Mutschke (1997)
+
+SiO2 data at wavelength shorter than 6.6 micon extended with 041
+
+002:  VU
+---------
+Cristalline Al2O3    : standard from shop or industry
+Amorphous Al2O3      : amorf gamma-Al2O3.
+Both from: Extinction Spectra of Corundum in the Wavelengths from UV to FIR
+of Koike et al. Icarus 114 1995 blz 203
+
+Cristaline ice       : Combination of :
+Bertie, J.E., Labbe`, H.J., Whalley, E.,JChPh 50, 4501 (1969) , 
+title : "Absorptivity of Ice I in the range 4000-30 cm -1."
++
+Amorphous ice of T=100K at the short wavelenght range
+
+Amorphous ice        : 
+Warren S.G. 1984, Applied Optics 23, 1206-1225
+Optical constants of ice from the ultraviolet to the microwave.
+
+003: Leiden
+---------
+Cristaline olivine (mg2)
+The main source of these data is the measurement made by Mukai and Koike (1990, 
+Icarus 87, 180). 
+The data is constructed as following:
+1. For wavelength between 7--200 micron, calculate (m', m") of crystallines
+olivine by calculating 17 Lorentz oscillators (the dispersion parameters were
+given in Mukai and Koike 1990);
+2. For wavelength larger than 200 micron, assume m" to be proportional to
+lambda^{-1};
+3. For wavelength shorter than 0.3 micron, we adopt those (m") of crystalline
+olivine (Huffman and Stapp 1973);
+4. For 0.3 -- 2 micron, we adopt m" intermediate of Jones and Merrill 1976
+and Martin and Crabtree 1983, very close to Draine and Lee 1984;
+5. Smoothly connect the above m" then construct m" between 2--7 micron;
+Then calculate m' from m" by using Kramers-Kronig relation.
+
+
+004:  Bruce Drain
+---------
+Laor and Draine, ApJ 402:441-468, 1993
+
+005: 
+-------
+Crystalline Magnetite (Fe3O4, isotropic) from Terry Russell Steyer, Dissertation,
+Univ. of Arizona, Tucson, 1974 , titel: "Infrared Optical Properties of some Solids 
+of Possible Interest in Astronomy and Atmospheric Physics".
+
+006: , 007:
+-----------
+Crystalline Haematite (Fe2O3) parallel and perp. to crystal axis 
+from Terry Russell Steyer, Dissertation,
+Univ. of Arizona, Tucson, 1974 , titel: "Infrared Optical Properties of some Solids 
+of Possible Interest in Astronomy and Atmospheric Physics".
+
+
+010: , 011:, 012:
+-----------------
+Crystalline forsterite data from Steyer 1974, thesis for different crystallographic axi.
+
+013: , 014:, 015:
+-----------------
+Crystalline enstatite, Jaeger et al., 1998 for different crystallographic axi.
+
+017: , 018:, 019:
+-----------------
+Crystalline forsterite, for different crystallographic axi.
+Combined data from Scott and Servoin
+
+020: 
+---------
+Henning/Stognienko A&A, 311,  1996
+
+021: , 022:, 023:
+-----------------
+Crystalline enstatite, for different crystallographic axi.
+lambda > 8 micron 		Jaeger 1998
+0.31 < lambda < 8 micron 	Amorf enstatite uit Jena (alle assen hetzelfde)
+lambda < 0.24 micron		Scott 1996
+
+025:
+-----------
+Amorphous enstatite and forsterite
+Scott, Duley ApJ suppl. 105, 1996, 401
+
+030: , 031:, 032:
+-----------------
+Crystalline forsterite data from Servoin and Piriou, phys. stat. sol. 55, 1973,  
+for different crystallographic axi.
+
+035: , 036:, 037:
+-----------------
+Crystalline forsterite for different crystallographic axi.
+Combined data from Scot en Steyer.
+
+040: , 041:
+-----------
+Crystalline Quartz (SiO2) for different crystallographic axi.
+Combined data of:
+
+Gray, D. C. (1963), American Institute of Physics Handbook,
+McGraw-Hill, New York, NY, 1963, 2nd Edition.
+
+Drummond, D. G. (1936) Absorption coefficients of crystal
+quartz in the infrared, Proc. Roy. Soc. (London)-Series A,
+153:328-338.
+
+Spitzer, W. G. and Kleinman, D. A. (1961) Infrared lattice
+bands of quartz, Phys. Rev., 121:1324-1335.
+
+Philipp, H. R. (1985) Silicon dioxide (SiO2), type-
+(crystalline), in Handbook of Optical Constants of Solids, Edited
+by E. D. Palik, Academic Press, Inc., Orlando, FL, 719-747.
+
+Longtin, D. R., Shettle, E. P., Hummel, J. R. and Pryce, J.
+D., (1988) A Wind Dependent Desert Aerosol Model: Radiative
+Properties, AFGL-TR-88-0112, Air Force Geophysics Laboratory,
+Hanscom AFB, MA, April 1988.
+
+042:
+----------
+From Jena.
+Data were obtained from polarized reflection measurements 
+of a natural rock crystal and fitting the spectra 
+with oscillators.
+
+
+043:
+----------
+lambda < 4.5 micron 041
+lambda > 4.5 micron 042
+

@@ -1,0 +1,1 @@
+optool -b data/ens_p.txt data/ens_s1.txt data/ens_s2.txt -l data/ens_p.txt
